@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package kata1;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -14,11 +16,12 @@ public class Kata1 {
 
     public static void main(String[] args) {
 
-        Person person = new Person("Airam", new Date(101, 6, 31));
+        Calendar birthdate = GregorianCalendar.getInstance();
+        birthdate.set(2001, 7, 31);
+        Person person = new Person("Airam", birthdate);
 
 
         System.out.println(person.getName() + " tiene " + person.getAge() + " años.");
-
     }
 
 
